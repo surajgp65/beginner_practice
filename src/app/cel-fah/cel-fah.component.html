@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="my-5">
+        <div class="card">
+          <div class="card-header text-center">
+            Celius to Fahernit Convertor
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Celius</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  type="text"
+                  name="number"
+                  [(ngModel)]="Celius"
+                  [ngModelOptions]="{ standalone: true }"
+                />
+              </div>
+              <div>
+                <p>Fahernit : {{ result1 }}</p>
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="celius()">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="my-5">
+        <div class="card">
+          <div class="card-header text-center">
+            Fahernit to Celius Convertor
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail2">Fahrenheit</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="exampleInputEmail2"
+                  [(ngModel)]="Fahernit"
+                  [ngModelOptions]="{ standalone: true }"
+                />
+              </div>
+              <div>
+                <p>Celius : {{ result2 }}</p>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                (click)="fahernit()"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="my-5">
+        <div class="card">
+          <div class="card-header text-center">
+            Fahernit to Celius Convertor
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="exampleInputEmail2">Celius</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleInputEmail2"
+                [(ngModel)]="cel"
+                (ngModelChange)="getFahernit($event)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail2">Fahrenheit</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="exampleInputEmail2"
+                [(ngModel)]="fah"
+                (ngModelChange)="getCelius($event)"
+              />
+            </div>
+            <div>
+              <p>Celius :{{ fah }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

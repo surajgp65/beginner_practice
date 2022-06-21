@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+#loader {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.loader {
+  border: 0.7vw solid transparent;
+  border-radius: 50%;
+  border-top-color: dodgerblue;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.loader1 {
+  width: 2.5vw;
+  height: 2.5vw;
+  animation: spin 0.4s linear infinite;
+}
+.loader2 {
+  width: 5vw;
+  height: 5vw;
+  animation: spin 0.8s linear infinite;
+}
+.loader3 {
+  width: 7.5vw;
+  height: 7.5vw;
+  animation: spin 1.2s linear infinite;
+}
+.loader4 {
+  width: 10vw;
+  height: 10vw;
+  animation: spin 1.6s linear infinite;
+}
+.loader5 {
+  width: 12.5vw;
+  height: 12.5vw;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

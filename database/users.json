@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstname": "Deepak",
+      "lastname": "Ahirwar",
+      "dob": "2022-07-02",
+      "gender": "Male",
+      "code": "+91",
+      "mobile": "99696969691",
+      "id": 1
+    },
+    {
+      "firstname": "Junaid",
+      "lastname": "Khan",
+      "dob": "1111-01-01",
+      "gender": "Male",
+      "code": "+91",
+      "mobile": "1111111119",
+      "id": 3
+    }
+  ]
+}

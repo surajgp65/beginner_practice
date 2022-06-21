@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <div class="card">
+        <div class="card-header text-center" *ngIf="!isEdit">Create User</div>
+        <div class="card-header text-center" *ngIf="isEdit">Edit User</div>
+        <div class="card-body">
+          <form [formGroup]="createUser">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="firstName"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="lastName"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="DOB">Date of Birth</label>
+              <input
+                type="date"
+                class="form-control"
+                id="DOB"
+                formControlName="dob"
+                yyyy-mm-dd
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">gender</label>
+              <select class="form-control" formControlName="gender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-2">
+                <label for="inputZip">Code </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="Code"
+                  formControlName="code"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputCity">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  formControlName="mobile"
+                  [pattern]="mobNumberPattern"
+                />
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              *ngIf="!isEdit"
+              (click)="onSubmit()"
+            >
+              Create User
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              *ngIf="isEdit"
+              (click)="edituser()"
+            >
+              Edit User
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
