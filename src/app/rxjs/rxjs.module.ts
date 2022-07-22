@@ -3,15 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { RxjsRoutingModule } from './rxjs-routing.module';
 import { IntervalComponent } from './interval/interval.component';
-
+import { OfFromComponent } from './of-from/of-from.component';
 
 @NgModule({
-  declarations: [
-    IntervalComponent
-  ],
-  imports: [
-    CommonModule,
-    RxjsRoutingModule
-  ]
+  declarations: [IntervalComponent, OfFromComponent],
+  imports: [CommonModule, RxjsRoutingModule],
 })
-export class RxjsModule { }
+export class RxjsModule {}

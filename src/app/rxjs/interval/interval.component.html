@@ -4,5 +4,12 @@
       <h3 class="text-center mt-2">Interval</h3>
       <p>Video {{ objmsg }}</p>
     </div>
+
+    <input
+      class="form-control"
+      type="text"
+      (ngModelChange)="inputVal($event)"
+    />
+    <span>{{ inputval }}</span>
   </div>
 </div>
